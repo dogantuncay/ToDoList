@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded( {extended : true} ));
 app.use(express.static(__dirname + "/dosyalar"));
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-mongoose.connect("mongodb+srv://emrah:1234@cluster0.9gzff.mongodb.net/Cluster0?retryWrites=true&w=majority" , {useNewUrlParser: true , useUnifiedTopology : true});
+mongoose.connect("mongodb+srv://tuncay:1234@cluster0.nvmcc.mongodb.net/Cluster0?retryWrites=true&w=majority" , {useNewUrlParser: true , useUnifiedTopology : true});
 
 var yapilacakListesi = new Schema(
   {
@@ -64,5 +64,5 @@ if(port == "" || port == null){
   port = 5000;
 }
 app.listen(port, function(){
-  console.log("port : " + port);
+  console.log("port numarasi : " + port);
 });
